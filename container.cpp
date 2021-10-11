@@ -1,23 +1,23 @@
 //------------------------------------------------------------------------------
-// container_Constr.cpp - содержит функции обработки контейнера
+// container.cpp - contains container handling functions
 //------------------------------------------------------------------------------
 
 #include "container.h"
 
 //------------------------------------------------------------------------------
-// Инициализация контейнера
+// Container initialization
 void Init(container& c) {
     c.len = 0;
 }
 
 //------------------------------------------------------------------------------
-// Очистка контейнера от элементов (освобождение памяти)
+// Clearing a container of elements (freeing memory)
 void Clear(container& c) {
     c.len = 0;
 }
 
 //------------------------------------------------------------------------------
-// Ввод содержимого контейнера из указанного файла.
+// Entering the contents of the container from the specified file.
 void In(container& c, FILE* file) {
     while (!feof(file)) {
         if (In(c.cont[c.len], file)) {
@@ -27,7 +27,7 @@ void In(container& c, FILE* file) {
 }
 
 //------------------------------------------------------------------------------
-// Случайный ввод содержимого контейнера
+// Random input of container contents
 void InRnd(container& c, int size) {
     while (c.len < size) {
         if (InRnd(c.cont[c.len])) {
@@ -37,7 +37,7 @@ void InRnd(container& c, int size) {
 }
 
 //------------------------------------------------------------------------------
-// Вывод содержимого контейнера в указанный поток
+// Outputting the contents of the container to the specified stream
 void Out(container& c, FILE* file) {
     fprintf(file, "Container contains %d elements.\n", c.len);
     for (int i = 0; i < c.len; i++) {
@@ -47,7 +47,7 @@ void Out(container& c, FILE* file) {
 }
 
 //------------------------------------------------------------------------------
-// Перемещение элементов контейнера
+// Moving container elements
 void Shift(container& c) {
     int counter = 0;
     double sum = 0;

@@ -1,17 +1,17 @@
 //------------------------------------------------------------------------------
-// tree.cpp - содержит функции обработки деревьев
+// tree.cpp - contains functions for processing trees
 //------------------------------------------------------------------------------
 
 #include "tree.h"
 
 //------------------------------------------------------------------------------
-// Ввод параметров дерева из потока
+// Input tree parameters from stream
 void In(tree& t, FILE* file) {
     fscanf(file, "%d%s", &t.age, &t.name);
 }
 
 //------------------------------------------------------------------------------
-// Случайный ввод параметров дерева
+// Random input of tree parameters
 void InRnd(tree& t) {
     char* str = RandomStr();
     strcpy(t.name, str);
@@ -19,7 +19,7 @@ void InRnd(tree& t) {
 }
 
 //------------------------------------------------------------------------------
-// Частное от деления количества гласныъ букв имени на количество всех букв
+// The quotient of dividing the number of vowels of the name by the number of all letters
 double Quotient(tree& t) {
     char all_gl[12] = { 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'Y', 'y' };
     double gl = 0;
@@ -35,7 +35,7 @@ double Quotient(tree& t) {
 }
 
 //------------------------------------------------------------------------------
-// Вывод параметров дерева
+// Output tree parameters
 void Out(tree& t, FILE* file) {
     fprintf(file, "It is Tree. Age: %d, Name: %s, Quotient of division: %e\n", t.age, &t.name, Quotient(t));
 }

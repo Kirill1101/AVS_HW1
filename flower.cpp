@@ -1,10 +1,10 @@
 //------------------------------------------------------------------------------
-// flower.cpp - содержит функции обработки цветов
+// flower.cpp - contains functions for processing flowers
 //------------------------------------------------------------------------------
 
 #include "flower.h"
 
-// Выбор типа
+// Type selection
 flower::Type GetType(int n) {
     switch (n) {
     case 1:
@@ -28,7 +28,7 @@ const char* GetTypeStr(int n) {
 }
 
 //------------------------------------------------------------------------------
-// Ввод параметров цветка из потока
+// Input the parameters of the flower from the stream
 void In(flower& f, FILE* file) {
     int k = 0;
     fscanf(file, "%d%s", &k, &f.name);
@@ -36,7 +36,7 @@ void In(flower& f, FILE* file) {
 }
 
 //------------------------------------------------------------------------------
-// Случайный ввод параметров цветка
+// Random input of flower parameters
 void InRnd(flower& f) {
     char* str = RandomStr();
     strcpy(f.name, str);
@@ -45,7 +45,7 @@ void InRnd(flower& f) {
 }
 
 //------------------------------------------------------------------------------
-// Частное от деления количества гласныъ букв имени на количество всех букв
+// The quotient of dividing the number of vowels of the name by the number of all letters
 double Quotient(flower& f) {
     char all_gl[12] = { 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'Y', 'y' };
     double gl = 0;
@@ -61,7 +61,7 @@ double Quotient(flower& f) {
 }
 
 //------------------------------------------------------------------------------
-// Вывод параметров цветка
+// Display the parameters of the flower
 void Out(flower& f, FILE* file) {
     const char* str = GetTypeStr(f.type);
     char type[10];

@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// shrub.cpp - содержит функции обработки кустарников
+// shrub.cpp - contains functions for processing shrubs
 //------------------------------------------------------------------------------
 
 #include "shrub.h"
@@ -63,7 +63,7 @@ const char* GetMonthStr(int n) {
 }
 
 //------------------------------------------------------------------------------
-// Ввод параметров кустарника из потока
+// Entering bush parameters from a stream
 void In(shrub& s, FILE* file) {
     int k = 0;
     fscanf(file, "%d%s", &k, &s.name);
@@ -71,7 +71,7 @@ void In(shrub& s, FILE* file) {
 }
 
 //------------------------------------------------------------------------------
-// Случайный ввод параметров кустарника
+// Random input of bush parameters
 void InRnd(shrub& s) {
     char* str = RandomStr();
     strcpy(s.name, str);
@@ -80,7 +80,7 @@ void InRnd(shrub& s) {
 }
 
 //------------------------------------------------------------------------------
-// Частное от деления количества гласныъ букв имени на количество всех букв
+// The quotient of dividing the number of vowels of the name by the number of all letters
 double Quotient(shrub& s) {
     char all_gl[12] = { 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'Y', 'y' };
     double gl = 0;
@@ -96,7 +96,7 @@ double Quotient(shrub& s) {
 }
 
 //------------------------------------------------------------------------------
-// Вывод параметров кустарника
+// Bush parameters output
 void Out(shrub& s, FILE* file) {
     const char* str = GetMonthStr(s.month);
     char month[15];

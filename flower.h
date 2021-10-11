@@ -2,7 +2,7 @@
 #define __flower__
 
 //------------------------------------------------------------------------------
-// flower.h - содержит описание цветка
+// flower.h - contains a description of the flower
 //------------------------------------------------------------------------------
 
 #include "stdio.h"
@@ -20,16 +20,16 @@ struct flower {
     char name[20];
 };
 
-// Ввод параметров цветка из файла
+// Enter flower parameters from file
 void In(flower& f, FILE* ifst);
 
-// Случайный ввод параметров цветка
+// Random input of flower parameters
 void InRnd(flower& f);
 
-// Частное
+// Quotient
 double Quotient(flower& f);
 
-// Вывод параметров цветка
+// Output of flower parameters
 void Out(flower& f, FILE* ofst);
 
 #endif

@@ -1,12 +1,12 @@
 //------------------------------------------------------------------------------
-// shape.cpp - содержит процедуры связанные с обработкой обобщенной фигуры
-// и создания произвольной фигуры
+// shape.cpp - contains procedures related to processing a generic shape
+// and create a custom shape
 //------------------------------------------------------------------------------
 
 #include "plant.h"
 
 //------------------------------------------------------------------------------
-// Ввод параметров обобщенного растения из файла
+// Entering the parameters of a generalized plant from a file
 bool In(plant& p, FILE* file) {
     int k = 0;
     fscanf(file, "%d", &k);
@@ -28,7 +28,7 @@ bool In(plant& p, FILE* file) {
     }
 }
 
-// Случайный ввод обобщенного растения
+// Random input of a generic plant
 bool InRnd(plant& p) {
     auto k = rand() % 3 + 1;
     switch (k) {
@@ -63,7 +63,7 @@ double Quotient(plant& p) {
 }
 
 //------------------------------------------------------------------------------
-// Вывод параметров текущего растения
+// Display the parameters of the current plant
 void Out(plant& pl, FILE* file) {
     switch (pl.k) {
     case plant::TREE:

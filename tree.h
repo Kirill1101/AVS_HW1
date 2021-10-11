@@ -1,7 +1,7 @@
 #ifndef __tree__
 #define __tree__
 //------------------------------------------------------------------------------
-// tree.h - содержит описание дерева
+// tree.h - contains a description of the tree
 //------------------------------------------------------------------------------
 
 #include "stdio.h"
@@ -9,20 +9,20 @@
 using namespace std;
 
 struct tree {
-    int age; // возраст
-    char name[20]; // название
+    int age;
+    char name[20];
 };
 
-// Ввод параметров треугольника из файла
+// Input tree parameters from file
 void In(tree& t, FILE* file);
 
-// Случайный ввод параметров треугольника
+// Random input of tree parameters
 void InRnd(tree& t);
 
-// Частное
+// Private
 double Quotient(tree& t);
 
-// Вывод параметров треугольника
+// Output tree parameters
 void Out(tree& t, FILE* file);
 
 #endif

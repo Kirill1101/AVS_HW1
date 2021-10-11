@@ -1,12 +1,12 @@
 ﻿//------------------------------------------------------------------------------
-// main.cpp - содержит главную функцию, 
-// обеспечивающую простое тестирование
+// main.cpp - contains the main function,
+// providing easy testing
 //------------------------------------------------------------------------------
 
 #include <iostream>
 #include <fstream>
-#include <cstdlib> // для функций rand() и srand()
-#include <ctime>   // для функции time()
+#include <cstdlib> 
+#include <ctime> 
 #include <cstring>
 
 #include "container.h"
@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
     Init(c);
     FILE* file;
 
-    // Ввод всех растений.
+    // Enter all plants.
     if (!strcmp(argv[1], "-f")) {
         file = fopen(argv[2], "rt");
         In(c, file);
@@ -48,12 +48,12 @@ int main(int argc, char* argv[]) {
         InRnd(c, size);
     }
 
-    // Вывод содержимого контейнера в файл
+    // Output the contents of the container to a file
     file = fopen(argv[3], "wt");
     Out(c, file);
     fclose(file);
 
-    // Вывод контейнера, обработанного функцией
+    // Output of the container processed by the function
     file = fopen(argv[4], "wt");
     Shift(c);
     Out(c, file);

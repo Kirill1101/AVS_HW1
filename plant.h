@@ -2,7 +2,7 @@
 #define __plant__
 
 //------------------------------------------------------------------------------
-// plant.h - содержит описание обобщающего растения
+// plant.h - contains a description of the generalizing plant
 //------------------------------------------------------------------------------
 
 #include "tree.h"
@@ -19,15 +19,15 @@ struct plant {
     };
 };
 
-// Ввод обобщенной фигуры
+// Enter a generic figure
 bool In(plant& s, FILE* file);
 
-// Случайный ввод обобщенной фигуры
+// Random input of a generic figure
 bool InRnd(plant& s);
 
 double Quotient(plant& p);
 
-// Вывод обобщенной фигуры
+// Display the generalized figure
 void Out(plant& s, FILE* file);
 
 #endif

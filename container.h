@@ -2,36 +2,36 @@
 #define __container__
 
 //------------------------------------------------------------------------------
-// container.h - содержит тип данных,
-// представляющий простейший контейнер
+// container.h - contains the data type,
+// representing the simplest container
 //------------------------------------------------------------------------------
 
 #include "plant.h"
 
 //------------------------------------------------------------------------------
-// Простейший контейнер на основе одномерного массива
+// The simplest container based on a one-dimensional array
 struct container {
     enum { max_len = 10000 };
     int len;
     plant cont[max_len];
 };
 
-// Инициализация контейнера
+// Initialize the container
 void Init(container& c);
 
-// Очистка контейнера от элементов (освобождение памяти)
+// Clearing the container from items (freeing memory)
 void Clear(container& c);
 
-// Ввод содержимого контейнера из указанного потока
+// Inject the contents of the container from the specified stream
 void In(container& c, FILE* file);
 
-// Случайный ввод содержимого контейнера
+// Randomly enter the contents of the container
 void InRnd(container& c, int size);
 
-// Вывод содержимого контейнера в указанный поток
+// Output the contents of the container to the specified stream
 void Out(container& c, FILE* file);
 
-// Перемещение элементов контейнера
+// Move container elements
 void Shift(container& c);
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef __shrub__
 #define __shrub__
 //------------------------------------------------------------------------------
-// strub.h - содержит описание кустарника
+// strub.h - contains a description of the bush
 //------------------------------------------------------------------------------
 
 #include "stdio.h"
@@ -9,7 +9,7 @@
 using namespace std;
 
 struct shrub {
-    // значения ключей для каждого месяца
+    // key values for each month
     enum Months
     {
         JANUARY,
@@ -25,21 +25,20 @@ struct shrub {
         NOVEMBER,
         DECEMBER
     };
-    // ключ
     Months month;
     char name[20];
 };
 
-// Ввод параметров кустарника из файла
+// Enter bush parameters from file
 void In(shrub& s, FILE* file);
 
-// Случайный ввод параметров кустарника
+// Random input of bush parameters
 void InRnd(shrub& s);
 
-// Частное
+// Quotient
 double Quotient(shrub& s);
 
-// Вывод параметров кустарника
+// Display the parameters of the bush
 void Out(shrub& s, FILE* file);
 
 #endif
